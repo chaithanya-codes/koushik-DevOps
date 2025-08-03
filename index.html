@@ -6,49 +6,120 @@
   <title>Chaithanya N | DevOps & SRE</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
       color: #333;
     }
+
     header {
-      background: #24292e;
+      background: linear-gradient(to right, #1f2937, #3f4c6b);
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      opacity: 0.85;
+    }
+
     section {
-      padding: 40px;
+      padding: 40px 20px;
       max-width: 900px;
       margin: auto;
     }
+
     h2 {
-      border-bottom: 2px solid #ddd;
+      border-bottom: 2px solid #ccc;
       padding-bottom: 10px;
+      margin-bottom: 30px;
+      color: #1f2937;
     }
-    .project {
-      margin-bottom: 20px;
-    }
-    .skills span {
-      display: inline-block;
-      background: #e0e0e0;
-      padding: 6px 12px;
-      margin: 5px;
-      border-radius: 5px;
-    }
-    footer {
-      text-align: center;
-      background: #ddd;
+
+    .project, .contact-link, ul li {
+      background: white;
       padding: 20px;
-      margin-top: 40px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
     }
+
+    .project:hover, ul li:hover {
+      transform: translateY(-4px);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills span {
+      background: #3b82f6;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.95em;
+      transition: background 0.3s;
+    }
+
+    .skills span:hover {
+      background: #2563eb;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "✔️";
+      margin-right: 10px;
+      color: #22c55e;
+    }
+
     a {
-      color: #0366d6;
+      color: #1d4ed8;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      background: #f1f5f9;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #6b7280;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .skills {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .skills span {
+        display: block;
+        width: fit-content;
+      }
     }
   </style>
 </head>
@@ -69,15 +140,15 @@
 <section>
   <h2>Projects</h2>
   <div class="project">
-    <strong>EKS Cluster Setup using Terraform</strong><br>
+    <strong>EKS Cluster Setup using Terraform</strong>
     <p>Automated EKS infrastructure creation with Terraform, IAM roles, and application deployment pipelines.</p>
-    <a href="https://github.com/yourusername/eks-terraform">GitHub Repo</a>
+    <a href="https://github.com/yourusername/eks-terraform" target="_blank">View GitHub Repo</a>
   </div>
 
   <div class="project">
-    <strong>Grafana & Prometheus Monitoring Stack</strong><br>
+    <strong>Grafana & Prometheus Monitoring Stack</strong>
     <p>Built monitoring dashboards with alerting for microservices running in Kubernetes.</p>
-    <a href="https://github.com/yourusername/grafana-prometheus-stack">GitHub Repo</a>
+    <a href="https://github.com/yourusername/grafana-prometheus-stack" target="_blank">View GitHub Repo</a>
   </div>
 </section>
 
@@ -109,10 +180,11 @@
 
 <section>
   <h2>Contact</h2>
-
-  <p>Email: <a href="mailto:nckrjy@gmail.com">nckrjy@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/chaithanya-codes">https://github.com/chaithanya-codes</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/koushik-chaithanya-n-09ba7b18a/">linkedin.com/in/koushik-chaithanya-n-09ba7b18a</a></p>
+  <div class="contact-link">
+    <p><strong>Email:</strong> <a href="mailto:nckrjy@gmail.com">nckrjy@gmail.com</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/chaithanya-codes" target="_blank">github.com/chaithanya-codes</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/koushik-chaithanya-n-09ba7b18a/" target="_blank">linkedin.com/in/koushik-chaithanya-n</a></p>
+  </div>
 </section>
 
 <footer>
